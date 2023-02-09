@@ -5,10 +5,12 @@ public class App {
 
         servicios.addPersona();
 
-        servicios.mostrarGente();
+        //servicios.mostrarGente();
 
-        servicios.eliminarGente();
+        //servicios.eliminarGente();
         
-        servicios.ordenAlfabetico();
+        //servicios.ordenAlfabetico();
+
+        //servicios.personaCompleta();
     }
 }

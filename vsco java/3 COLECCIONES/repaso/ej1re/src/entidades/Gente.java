@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Gente {
     private String nombre;
-    private String dni;
-    private int edad;
+    private Integer dni;
+    private Integer edad;
 
     ArrayList<String> Gente = new ArrayList<>();
 
@@ -17,19 +17,19 @@ public class Gente {
         this.nombre = nombre;
     }
 
-    public String getDni() {
+    public Integer getDni() {
         return dni;
     }
 
-    public void setDni(String dni) {
+    public void setDni(Integer dni) {
         this.dni = dni;
     }
 
-    public int getEdad() {
+    public Integer getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(Integer edad) {
         this.edad = edad;
     }
 

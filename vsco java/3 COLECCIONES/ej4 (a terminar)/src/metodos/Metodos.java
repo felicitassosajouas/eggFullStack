@@ -46,10 +46,10 @@ public class Metodos {
     }
 
     public void peliculasMasDeUnaHora(){
-        for (String var : peliculasArray) {
-            if (p.getDuracion()>1) {
-                System.out.println(var + "dura mas de 1 hr");
-            } else {
+        for (String aux : peliculasArray) {
+            if (p.getDuracion()>=1) {
+                System.out.println(aux + "dura mas de 1 hr");
+            } else{
                 System.out.println("ninguna pelicula dura mas de una hora");
             }
         }
