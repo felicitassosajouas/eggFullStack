@@ -69,7 +69,7 @@ public final class Televisor extends Electrodomestico {
         if (resolucion > 40){
          preciofinal *= 0.3;
         if (TDT = true){
-         preciofinal += 500;      
+        preciofinal += 500;      
         }
     }    
     return preciofinal + precio;

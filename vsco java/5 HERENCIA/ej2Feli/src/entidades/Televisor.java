@@ -7,6 +7,15 @@ public class Televisor extends Electrodomesticos{
     
     public Televisor() {
     }
+    public Televisor(Scanner leer, boolean sintonizadorTdt, double resolucion, String rta) {
+        this.leer = leer;
+        this.sintonizadorTdt = sintonizadorTdt;
+        this.resolucion = resolucion;
+        this.rta = rta;
+    }
+    public Televisor(int i, String string, String string2, int j, char c, boolean b, int k) {
+      // TODO document why this constructor is empty
+    }
     public boolean isSintonizadorTdt() {
         return sintonizadorTdt;
     }

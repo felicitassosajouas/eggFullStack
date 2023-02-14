@@ -5,13 +5,16 @@ public class Lavadora extends Electrodomesticos{
     Scanner leer = new Scanner(System.in);
     private double carga;
 
-    public Lavadora() {
+    public Lavadora(int i, String string, String string2, int j, char c) {
         //this.carga = carga;
     }
 
     public Lavadora(Double precio, String color, String consumoEnerg, Double peso, char letra, double carga) {
         super(precio, color, consumoEnerg, peso, letra);
         this.carga = carga;
+    }
+
+    public Lavadora() {
     }
 
     public double getCarga() {
