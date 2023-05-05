@@ -68,7 +68,11 @@ public class App {
 
                     case 4:
                         System.out.println("Medidas de los terrenos");
-                        //terminar
+                        for (Edificio aux : edificios) {
+                            System.out.println("aux");
+                            aux.calcularSuperficie();
+                            aux.calcularVolumen();
+                        }
                         break;
                     default:
                         System.out.println("Caracter ingresado inválido");

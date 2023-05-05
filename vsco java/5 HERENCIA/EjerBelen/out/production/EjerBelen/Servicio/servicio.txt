@@ -1,0 +1,75 @@
+package Servicio;
+
+import Atributos.Alojamientos;
+import Atributos.ExtraHotelero.Camping;
+import Atributos.Hoteles.Hotel4;
+import Atributos.Hoteles.Hotel5;
+import Atributos.ExtraHotelero.Residencias;
+import Atributos.Hoteles.Hoteles;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Usuario
+ */
+public class ClaseServicio {
+    ArrayList <Alojamientos> nuevoAlojamiento = new ArrayList();
+    Scanner leer = new Scanner(System.in);
+    int opcion1, opcion2,opcion3,opcion4 ;
+  
+       
+       
+    public void menuPrincipal(){
+        ArrayList<Hoteles>hoteles = new ArrayList<>();
+        System.out.println("Cuantos hoteles de 4 estrellas desea crear? ");
+        opcion1 = leer.nextInt();
+        System.out.println("Cuantos hoteles de 5 estrellas desea crear? ");
+        opcion2 = leer.nextInt();
+        System.out.println("Cuantos camping desea crear? ");
+        opcion3 = leer.nextInt();
+        System.out.println("Cuantas residencias desea crear? ");
+        opcion4 = leer.nextInt();
+        for (int i = 0; i < opcion1; i++) {
+            System.out.println("---- Usted esta creando un Hotel de 4 estrellas ----");
+            Ho
+             nuevoAlojamiento.add(new Hotel4());
+        }
+        for (int i = 0; i < opcion2; i++) {
+            System.out.println("---- Usted esta creando un Hotel de 5 estrellas ----");
+             nuevoAlojamiento.add(new Hotel5());
+        }
+        for (int i = 0; i < opcion3; i++) {
+             nuevoAlojamiento.add(new Camping());
+        }
+        for (int i = 0; i < opcion4; i++) {
+            nuevoAlojamiento.add(new Residencias());
+        }
+        int cont1 = 0, cont2 = 0;
+
+        for (Alojamientos e : nuevoAlojamiento) {
+            if (e instanceof Hotel4) {
+                Hotel4 nuevoHotel4 = (Hotel4) e;
+                ((Hotel4) e).getPrecioHabitaciones();
+
+            } else if (e instanceof Hotel5) {
+                Hotel5 nuevoHotel5 = (Hotel5) e;
+                ((Hotel5) e).getPrecioHabitaciones();
+            } else if (e instanceof Camping) {
+                Camping nuevoCamping = (Camping) e;
+                if(nuevoCamping.isPoseeResto()){
+                    cont1++;
+                }
+            } else {
+                Residencias nuevaResidencia = (Residencias) e;
+                if(nuevaResidencia.isDescuentos()) {
+                    cont2++;
+                }
+            }
+        }System.out.print("La cantidad de camping con Restaurantes son: "+ cont1);
+        System.out.println("La cantidad de residencias con descuento son: "+ cont2);
+    }System.out.print("La cantidad de camping con Restaurantes son: "+ cont1);
+        System.out.println("La cantidad de residencias con descuento son: "+ cont2);
+    }
